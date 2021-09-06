@@ -15,7 +15,6 @@ function createWindow () {
   mainWindow.on('closed', function () {
     mainWindow = null;
   });
-
   mainWindow.once('ready-to-show', () => {
     autoUpdater.checkForUpdatesAndNotify();
   });
@@ -41,10 +40,10 @@ ipcMain.on('app_version', (event) => {
   event.sender.send('app_version', { version: app.getVersion() });
 });
 
-
 autoUpdater.on('update-available', () => {
   mainWindow.webContents.send('update_available');
 });
+
 autoUpdater.on('update-downloaded', () => {
   mainWindow.webContents.send('update_downloaded');
 });
@@ -52,4 +51,3 @@ autoUpdater.on('update-downloaded', () => {
 ipcMain.on('restart_app', () => {
   autoUpdater.quitAndInstall();
 });
-
