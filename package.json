@@ -1,0 +1,27 @@
+{
+  "name": "ecultmeet",
+  "version": "1.0.0",
+  "description": "test electron updater",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManuGowda/ecultmeet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManuGowda/ecultmeet/issues"
+  },
+  "homepage": "https://github.com/ManuGowda/ecultmeet#readme",
+  "devDependencies": {
+    "electron": "12.0.5",
+    "electron-builder": "22.10.4"
+  },
+  "dependencies": {
+    "electron-updater": "4.3.9"
+  }
+}
